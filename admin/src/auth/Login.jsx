@@ -8,8 +8,8 @@ const Login = () => {
     <div className='min-w-screen min-h-screen bg-[#cdcae1] flex justify-center items-center '>
       <div className='w-96 text-[#ffffff] p-2'>
         <div className='bg-[#102749] p-6 rounded-md'>
-          <h1 className='text-xl font-bold text-center mb-3 '>Welcome to Ecommerce </h1>
-          <p>please login to your account to continue</p>
+          <h1 className='text-4xl font-bold text-center mb-1 '>Welcome to Easyshop </h1>
+          <p className='mb-4'>please login to your account to continue</p>
           <form action=''>
             <div className='col-span-full mb-3'>
               <label htmlFor='email' className='block text-sm font-medium leading-6 text-white'>
@@ -56,7 +56,7 @@ const Login = () => {
               <div>
                 <p className='text-center mt-4'>
                   Don't have an account?{' '}
-                  <Link to='/login' className='text-blue-500 hover:text-indigo-700'>
+                  <Link to='/register' className='text-blue-500 hover:text-indigo-700'>
                     Sign Up
                   </Link>
                 </p>
@@ -72,14 +72,15 @@ const Login = () => {
 
               <div className='flex justify-center items-center gap-2'>
                 <div className='w-40 h-8 rounded-md bg-orange-600/50 flex justify-center items-center'>
-                  <span>
+                  <button type='button' className='text-sm font-semibold leading-6 '>
                     <FaGoogle />
-                  </span>
+                  </button>
+                  <span></span>
                 </div>
                 <div className='w-40 h-8 rounded-md bg-blue-600 flex justify-center items-center'>
-                  <span>
+                  <button type='button' className='text-sm font-semibold leading-6 '>
                     <FaFacebook />
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>

@@ -8,8 +8,8 @@ const Register = () => {
     <div className='min-w-screen min-h-screen bg-[#cdcae1] flex justify-center items-center '>
       <div className='w-96 text-[#ffffff] p-2'>
         <div className='bg-[#102749] p-6 rounded-md'>
-          <h1 className='text-xl font-bold text-center mb-3 '>Welcome to Ecommerce </h1>
-          <p>please register to continue your account</p>
+          <h1 className='text-4xl font-bold text-center mb-1 '>Welcome to Easyshop </h1>
+          <p className='mb-4'>please register to continue your account</p>
           <form action=''>
             <div className='col-span-full mb-3'>
               <label htmlFor='name' className='block text-sm font-medium leading-6 text-white'>
@@ -98,7 +98,7 @@ const Register = () => {
               </div>
 
               <div className='flex justify-center items-center gap-2'>
-                <div className='w-40 h-8 rounded-md bg-orange-600/50 flex justify-center items-center'>
+                <div className='w-40 h-8 rounded-md bg-orange-700 flex justify-center items-center'>
                   <span>
                     <FaGoogle />
                   </span>
