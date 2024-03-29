@@ -1,10 +1,13 @@
 import React from 'react'
+import { FaFacebook, FaGoogle } from 'react-icons/fa'
+
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   return (
     <div className='min-w-screen min-h-screen bg-[#cdcae1] flex justify-center items-center '>
-      <div className='w-[350px] text-[#ffffff] p-2'>
-        <div className='bg-[#102749] p-4 rounded-md'>
+      <div className='w-96 text-[#ffffff] p-2'>
+        <div className='bg-[#102749] p-6 rounded-md'>
           <h1 className='text-xl font-bold text-center mb-3 '>Welcome to Ecommerce </h1>
           <p>please register to continue your account</p>
           <form action=''>
@@ -76,6 +79,36 @@ const Register = () => {
               >
                 Sing Up
               </button>
+
+              <div>
+                <p className='text-center mt-4'>
+                  Already have an account?{' '}
+                  <Link to='/login' className='text-blue-500 hover:text-indigo-700'>
+                    Sign in
+                  </Link>
+                </p>
+              </div>
+
+              <div className='w-full flex justify-center items-center mb-3'>
+                <div className='w-[45%] bg-slate-500 h-[1px]'></div>
+                <div className='w-[10%] flex justify-center items-center'>
+                  <span>OR</span>
+                </div>
+                <div className='w-[45%] bg-slate-500 h-[1px]'></div>
+              </div>
+
+              <div className='flex justify-center items-center gap-2'>
+                <div className='w-40 h-8 rounded-md bg-orange-600/50 flex justify-center items-center'>
+                  <span>
+                    <FaGoogle />
+                  </span>
+                </div>
+                <div className='w-40 h-8 rounded-md bg-blue-600 flex justify-center items-center'>
+                  <span>
+                    <FaFacebook />
+                  </span>
+                </div>
+              </div>
             </div>
           </form>
         </div>
