@@ -37,9 +37,9 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
       >
         <ToggleButton value>
           <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-          Custom theme
+          Custom
         </ToggleButton>
-        <ToggleButton value={false}>Material Design 2</ToggleButton>
+        <ToggleButton value={false}>Defalt</ToggleButton>
       </ToggleButtonGroup>
     </Box>
   )
@@ -54,7 +54,7 @@ ToggleCustomTheme.propTypes = {
 
 export default function LandingPage() {
   const [mode, setMode] = useState('light')
-  const [showCustomTheme, setShowCustomTheme] = useState(true)
+  const [showCustomTheme, setShowCustomTheme] = useState({})
   const LPtheme = createTheme(getLPTheme(mode))
   const defaultTheme = createTheme({ palette: { mode } })
 
