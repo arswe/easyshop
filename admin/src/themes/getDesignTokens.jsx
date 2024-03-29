@@ -82,16 +82,19 @@ export const getDesignTokens = (mode) => ({
     },
   },
   typography: {
-    fontFamily: ['"Inter", "sans-serif"'].join(','),
+    fontFamily: ['"Rajdhani", "sans-serif"'].join(','),
+    fontWeightRegular: 600,
+    fontWeightBold: 700,
+
     h1: {
       fontSize: 60,
-      fontWeight: 600,
+      fontWeight: 700,
       lineHeight: 78 / 70,
       letterSpacing: -0.2,
     },
     h2: {
       fontSize: 48,
-      fontWeight: 600,
+      fontWeight: 700,
       lineHeight: 1.2,
     },
     h3: {
@@ -100,12 +103,12 @@ export const getDesignTokens = (mode) => ({
     },
     h4: {
       fontSize: 36,
-      fontWeight: 500,
+      fontWeight: 600,
       lineHeight: 1.5,
     },
     h5: {
       fontSize: 20,
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h6: {
       fontSize: 18,
@@ -117,15 +120,15 @@ export const getDesignTokens = (mode) => ({
       fontSize: 16,
     },
     body1: {
-      fontWeight: 400,
+      fontWeight: 600,
       fontSize: 15,
     },
     body2: {
-      fontWeight: 400,
+      fontWeight: 600,
       fontSize: 14,
     },
     caption: {
-      fontWeight: 400,
+      fontWeight: 600,
       fontSize: 12,
     },
   },

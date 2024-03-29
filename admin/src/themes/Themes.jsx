@@ -77,7 +77,7 @@ export default function getLPTheme(mode) {
             padding: '12px 16px',
             textTransform: 'none',
             borderRadius: '10px',
-            fontWeight: 500,
+            fontWeight: 700,
             ...(theme.palette.mode === 'dark' && {
               color: gray[400],
               boxShadow: '0 4px 16px rgba(0, 0, 0, 0.5)',
@@ -257,7 +257,7 @@ export default function getLPTheme(mode) {
         styleOverrides: {
           root: ({ theme }) => ({
             color: brand[600],
-            fontWeight: 500,
+            fontWeight: 700,
             position: 'relative',
             textDecoration: 'none',
             '&::before': {
@@ -286,7 +286,7 @@ export default function getLPTheme(mode) {
           root: ({ theme }) => ({
             borderRadius: '99px',
             color: gray[500],
-            fontWeight: 500,
+            fontWeight: 700,
             ...(theme.palette.mode === 'dark' && {
               color: gray[300],
             }),
