@@ -8,7 +8,7 @@ import ToggleButton from '@mui/material/ToggleButton'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 import { useState } from 'react'
 import Nabvar from './components/common/Navbar'
-import { getLPTheme } from './themes/Themes'
+import getLPTheme from './themes/Themes'
 
 function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
   return (
