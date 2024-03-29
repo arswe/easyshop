@@ -1,12 +1,14 @@
-import { Box, CssBaseline, ToggleButton, ToggleButtonGroup } from '@mui/material'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { useState } from 'react'
-import getLPTheme from './themes/Themes'
-
-import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded'
 import PropTypes from 'prop-types'
 
-import Navbar from './components/common/Navbar'
+import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded'
+import Box from '@mui/material/Box'
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import ToggleButton from '@mui/material/ToggleButton'
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
+import { useState } from 'react'
+import Nabvar from './components/common/Navbar'
+import { getLPTheme } from './themes/Themes'
 
 function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
   return (
@@ -35,9 +37,9 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
       >
         <ToggleButton value>
           <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-          Custom
+          Custom theme
         </ToggleButton>
-        <ToggleButton value={false}>Default</ToggleButton>
+        <ToggleButton value={false}>Material Design 2</ToggleButton>
       </ToggleButtonGroup>
     </Box>
   )
@@ -50,7 +52,7 @@ ToggleCustomTheme.propTypes = {
   toggleCustomTheme: PropTypes.func.isRequired,
 }
 
-function App() {
+export default function LandingPage() {
   const [mode, setMode] = useState('light')
   const [showCustomTheme, setShowCustomTheme] = useState(true)
   const LPtheme = createTheme(getLPTheme(mode))
@@ -67,12 +69,12 @@ function App() {
   return (
     <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
       <CssBaseline />
-      <Navbar mode={mode} toggleColorMode={toggleColorMode} />
+      <Nabvar mode={mode} toggleColorMode={toggleColorMode} />
 
-      <Box sx={{ bgcolor: 'background.default' }}>Hello</Box>
+      <Box sx={{ bgcolor: 'background.default' }}>
+        <p>ok</p>
+      </Box>
       <ToggleCustomTheme showCustomTheme={showCustomTheme} toggleCustomTheme={toggleCustomTheme} />
     </ThemeProvider>
   )
 }
-
-export default App
