@@ -16,11 +16,7 @@ class authControllers {
           response.cookie('accessToken', token, {
             expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
           })
-          responseReturn(response, 200, {
-            success: 'Login success',
-            token,
-            role: admin.role,
-          })
+          responseReturn(response, 200, { success: 'Login success', token })
         } else {
           responseReturn(response, 400, { error: 'Password is incorrect' })
         }
