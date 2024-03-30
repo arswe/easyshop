@@ -14,7 +14,6 @@ const AdminLogin = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(adminLogin(state))
-    console.log(state)
   }
   return (
     <div className='min-w-screen min-h-screen bg-[#cdcae1] flex justify-center items-center '>
