@@ -1,3 +1,4 @@
+const { dbConnect } = require('./database/db')
 const express = require('express')
 const app = express()
 
@@ -9,6 +10,7 @@ const cookieParser = require('cookie-parser')
 
 const dotenv = require('dotenv')
 dotenv.config()
+dbConnect()
 
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }))
 app.use(bodyParser.json())
@@ -25,5 +27,7 @@ app.get('/', (req, res) => {
 app.use('/api', authRoutes)
 
 app.listen(port, () => {
-  console.log(color.rainbow(`Backend port http://localhost:${process.env.PORT}`))
+  console.log(
+    color.cyan(`Backend Port http://localhost:${process.env.PORT}`).bold
+  )
 })
