@@ -4,10 +4,12 @@ import apiClient from '../../services/apiClient'
 export const adminLogin = createAsyncThunk('auth/adminLogin', async (info) => {
   console.log(info)
   try {
-    const { data } = await apiClient.post('/adminLogin', info, { withCredentials: true })
+    const { data } = await apiClient.post('/adminLogin', info, {
+      withCredentials: true,
+    })
     console.log(data)
   } catch (error) {
-    console.log(error)
+    console.log(error.response.data)
   }
 })
 
