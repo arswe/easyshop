@@ -10,6 +10,15 @@ class authControllers {
 
       if (admin) {
         const match = await bcrypt.compare(password, admin.password)
+        if (match) {
+          const token = admin.createToken({ id: admin._id, role: admin.role })
+          response.cookie('accessToken', token, {
+            expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+          })
+          responseReturn(response, 200, { message: 'Login success' })
+        } else {
+          responseReturn(response, 400, { error: 'Password is incorrect' })
+        }
       } else {
         responseReturn(response, 404, { error: 'Email not found' })
       }
