@@ -1,10 +1,18 @@
-const color = require('colors')
-
 const express = require('express')
 const app = express()
 
+const color = require('colors')
+const cors = require('cors')
+
+const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
+
 const dotenv = require('dotenv')
 dotenv.config()
+
+app.use(cors({ origin: 'http://localhost:3000', credentials: true }))
+app.use(bodyParser.json())
+app.use(cookieParser())
 
 const authRoutes = require('./src/routes/authRoutes')
 

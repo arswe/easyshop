@@ -1,6 +1,6 @@
 class authControllers {
   adminLogin(req, res) {
-    res.send('Admin Login')
+    console.log(req.body)
   }
 }
 
