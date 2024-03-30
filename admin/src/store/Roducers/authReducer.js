@@ -1,16 +1,18 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-const authReducer = createSlice({
+export const adminLogin = createAsyncThunk('auth/adminLogin')
+
+export const authReducer = createSlice({
   name: 'auth',
   initialState: {
     successMessage: '',
     errorMessage: '',
     loader: false,
-    userInfo: {},
+    userInfo: '',
   },
   reducers: {},
 
-  extraReducers: {},
+  extraReducers: () => {},
 })
 
-export default authReducer
+export default authReducer.reducer
