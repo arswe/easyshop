@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-import { FaFacebook, FaGoogle } from 'react-icons/fa'
 
-import { Link } from 'react-router-dom'
-
-const Login = () => {
+const AdminLogin = () => {
   const [state, setState] = useState({ email: '', password: '' })
 
   const inputHandler = (e) => {
@@ -18,8 +15,11 @@ const Login = () => {
     <div className='min-w-screen min-h-screen bg-[#cdcae1] flex justify-center items-center '>
       <div className='w-96 text-[#ffffff] p-2'>
         <div className='bg-[#7f97bb] p-6 rounded-md'>
-          <h1 className='text-4xl font-bold text-center mb-1 '>Welcome to Easyshop </h1>
-          <p className='mb-4'>please login to your account to continue</p>
+          <div className='has-[70px] flex justify-center items-center'>
+            <div className='w-[180px] h-[50px]'>
+              <img className='w-full h-full' src='http://localhost:3000/images/logo.png' alt='logo' />
+            </div>
+          </div>
           <form onSubmit={submitHandler}>
             <div className='col-span-full mb-3'>
               <label htmlFor='email' className='block text-sm font-medium leading-6 text-white'>
@@ -64,39 +64,8 @@ const Login = () => {
                 type='submit'
                 className='w-full font-bold bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
               >
-                Sing in
+                Go
               </button>
-
-              <div>
-                <p className='text-center mt-4'>
-                  Don't have an account?{' '}
-                  <Link to='/register' className='text-blue-500 hover:text-indigo-700'>
-                    Sign Up
-                  </Link>
-                </p>
-              </div>
-
-              <div className='w-full flex justify-center items-center mb-3'>
-                <div className='w-[45%] bg-slate-500 h-[1px]'></div>
-                <div className='w-[10%] flex justify-center items-center'>
-                  <span>OR</span>
-                </div>
-                <div className='w-[45%] bg-slate-500 h-[1px]'></div>
-              </div>
-
-              <div className='flex justify-center items-center gap-2'>
-                <div className='w-40 h-8 rounded-md bg-orange-600/50 flex justify-center items-center'>
-                  <button type='button' className='text-sm font-semibold leading-6 '>
-                    <FaGoogle />
-                  </button>
-                  <span></span>
-                </div>
-                <div className='w-40 h-8 rounded-md bg-blue-600 flex justify-center items-center'>
-                  <button type='button' className='text-sm font-semibold leading-6 '>
-                    <FaFacebook />
-                  </button>
-                </div>
-              </div>
             </div>
           </form>
         </div>
@@ -105,4 +74,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default AdminLogin

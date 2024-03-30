@@ -18,7 +18,7 @@ const Register = () => {
   return (
     <div className='min-w-screen min-h-screen bg-[#cdcae1] flex justify-center items-center '>
       <div className='w-96 text-[#ffffff] p-2'>
-        <div className='bg-[#102749] p-6 rounded-md'>
+        <div className='bg-[#7f97bb] p-6 rounded-md'>
           <h1 className='text-4xl font-bold text-center mb-1 '>Welcome to Easyshop </h1>
           <p className='mb-4'>please register to continue your account</p>
           <form onSubmit={submitHandler}>
