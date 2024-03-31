@@ -35,40 +35,14 @@ const AdminDashboard = () => {
         dashArray: 0,
       },
       xaxis: {
-        categories: [
-          'Jan',
-          'Feb',
-          'Mar',
-          'Apl',
-          'May',
-          'Jun',
-          'Jul',
-          'Aug',
-          'Sep',
-          'Oct',
-          'Nov',
-          'Dec',
-        ],
+        categories: ['Jan', 'Feb', 'Mar', 'Apl', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       },
       legend: { position: 'top' },
       responsive: [
         {
           breakpoint: 565,
           yaxis: {
-            categories: [
-              'Jan',
-              'Feb',
-              'Mar',
-              'Apl',
-              'May',
-              'Jun',
-              'Jul',
-              'Aug',
-              'Sep',
-              'Oct',
-              'Nov',
-              'Dec',
-            ],
+            categories: ['Jan', 'Feb', 'Mar', 'Apl', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           },
           options: {
             plotOptions: { bar: { horizontal: true } },
@@ -132,24 +106,15 @@ const AdminDashboard = () => {
         <div className='w-full flex flex-wrap mt-7'>
           <div className='w-full lg:w-7/12 lg:pr-3'>
             <div className='w-full bg-[#07102c] p-4 rounded-md'>
-              <Chart
-                options={state.options}
-                series={state.series}
-                type='bar'
-                height={350}
-              />
+              <Chart options={state.options} series={state.series} type='bar' height={350} />
             </div>
           </div>
 
           <div className='w-full lg:w-5/12 lg:pl-4 mt-6 lg:mt-0'>
-            <div className='w-full bg-[#e7e7f7] p-4 rounded-md text-[#d0d2d6]'>
+            <div className='w-full bg-[#07102c] p-4 rounded-md text-[#d0d2d6]'>
               <div className='flex justify-between items-center'>
-                <h2 className='font-semibold text-lg text-[#1a1919] pb-3'>
-                  Recent Seller Message
-                </h2>
-                <Link className='font-semibold text-sm text-[#171718]'>
-                  View All
-                </Link>
+                <h2 className='font-semibold text-lg text-[#f1f2f5] pb-3'>Recent Seller Message</h2>
+                <Link className='font-semibold text-sm text-[#f3f3f5]'>View All</Link>
               </div>
 
               <div className='flex flex-col gap-2 pt-6 text-[#d0d2d6]'>
@@ -205,14 +170,10 @@ const AdminDashboard = () => {
           </div>
         </div>
         {/* Add this div */}
-        <div className='w-full p-4 bg-[#1b866f] rounded-md mt-6'>
-          <div className='flex justify-between items-center border-b-2 border-cyan-400'>
-            <h2 className='font-semibold text-lg text-[#d0d2d6] pb-3 '>
-              Recent Orders
-            </h2>
-            <Link className='font-semibold text-sm text-[#d0d2d6]'>
-              View All
-            </Link>
+        <div className='w-full p-4 bg-[#07102c] rounded-md mt-6'>
+          <div className='flex justify-between items-center border-b-2 border-cyan-200'>
+            <h2 className='font-semibold text-lg text-[#d0d2d6] pb-3 '>Recent Orders</h2>
+            <Link className='font-semibold text-sm text-[#d0d2d6]'>View All</Link>
           </div>
 
           <div className='relative overflow-x-auto'>
@@ -238,28 +199,19 @@ const AdminDashboard = () => {
               </thead>
 
               <tbody>
-                <tr className='border-b border-slate-700'>
-                  <td className='py-3 px-4'>#1234</td>
-                  <td className='py-3 px-4'>$125</td>
-                  <td className='py-3 px-4'>Paid</td>
-                  <td className='py-3 px-4'>Delivered</td>
-                  <td className='py-3 px-4'>
-                    <button className='bg-[#f8d8d8] text-[#fa0305] px-3 py-1 rounded-md'>
-                      Active
-                    </button>
-                  </td>
-                </tr>
-                <tr className='border-b border-slate-700'>
-                  <td className='py-3 px-4'>#1234</td>
-                  <td className='py-3 px-4'>$125</td>
-                  <td className='py-3 px-4'>Paid</td>
-                  <td className='py-3 px-4'>Delivered</td>
-                  <td className='py-3 px-4'>
-                    <button className='bg-[#f8d8d8] text-[#fa0305] px-3 py-1 rounded-md'>
-                      Active
-                    </button>
-                  </td>
-                </tr>
+                {[1, 2, 3, 4].map((order, index) => (
+                  <tr className='border-b border-slate-700' key={index}>
+                    <td className='py-3 px-4'>#1234</td>
+                    <td className='py-3 px-4'>$125</td>
+                    <td className='py-3 px-4'>Paid</td>
+                    <td className='py-3 px-4'>Delivered</td>
+                    <td className='py-3 px-4'>
+                      <Link to='/admin/dashboard' className='bg-[#f8d8d8] text-[#fa0305] px-3 py-1 rounded-md'>
+                        view
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
