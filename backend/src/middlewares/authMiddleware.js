@@ -11,6 +11,8 @@ module.exports.authMiddleware = async (request, response, next) => {
       request.role = decodeToken.role
       request.id = decodeToken.id
       next()
-    } catch (error) {}
+    } catch (error) {
+      return response.status(401).json({ error: 'You need to login first' })
+    }
   }
 }

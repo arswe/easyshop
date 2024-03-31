@@ -26,6 +26,21 @@ class authControllers {
     } catch (error) {
       responseReturn(response, 500, { error: error.message })
     }
+  } // End of adminLogin
+
+  getUser = async (request, response) => {
+    const { id, role } = request
+
+    try {
+      if (role === 'admin') {
+        const user = await adminModel.findById(id)
+        responseReturn(response, 200, { userInfo: user })
+      } else {
+        console.log('seller or user into getUser')
+      }
+    } catch (error) {
+      responseReturn(response, 500, { error: error.message })
+    }
   }
 }
 
