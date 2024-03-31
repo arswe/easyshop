@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { getNav } from '../components/common'
 
 const SideBar = () => {
+  const { pathname } = useLocation()
   const [allNavs, setAllNavs] = useState([])
 
   useEffect(() => {
     const navs = getNav('admin')
+    setAllNavs(navs)
   }, [])
+
+  console.log(allNavs)
   return (
     <div>
       <div></div>
@@ -24,21 +29,18 @@ const SideBar = () => {
         </div>
 
         <div className='mt-5'>
-          <Link to='/admin/dashboard' className='block px-4 py-3'>
-            Dashboard
-          </Link>
-          <Link to='/admin/products' className='block px-4 py-3'>
-            Products
-          </Link>
-          <Link to='/admin/orders' className='block px-4 py-3'>
-            Orders
-          </Link>
-          <Link to='/admin/users' className='block px-4 py-3'>
-            Users
-          </Link>
-          <Link to='/admin/settings' className='block px-4 py-3'>
-            Settings
-          </Link>
+          <ul>
+            {allNavs.map((nav) => (
+              <li key={nav.id} className='flex items-center'>
+                <Link to={nav.path} className='flex items-center w-full'>
+                  <div className='w-[40px] h-[40px] flex justify-center items-center'>
+                    {nav.icon}
+                  </div>
+                  <p className='text-white'>{nav.title}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

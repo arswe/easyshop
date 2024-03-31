@@ -1,8 +1,13 @@
-export const allNavs = [
-  {
-    id: 1,
-    title: 'Dashboard',
-    route: '/admin/dashboard',
-    icon: <AiOut />,
-  },
-]
+import { allNav } from './AllNav'
+
+export const getNav = (role) => {
+  const finalNav = []
+
+  for (let i = 0; i < allNav.length; i++) {
+    if (allNav[i].role === role) {
+      finalNav.push(allNav[i])
+    }
+  }
+
+  return finalNav
+}
