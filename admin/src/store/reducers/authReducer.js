@@ -10,6 +10,8 @@ export const adminLogin = createAsyncThunk(
         withCredentials: true,
       })
 
+      localStorage.setItem('accessToken', data.token)
+
       return fulfillWithValue(data)
     } catch (error) {
       return rejectWithValue(error.response.data)
