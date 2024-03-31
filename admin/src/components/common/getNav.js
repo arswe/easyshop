@@ -1,4 +1,4 @@
-import { allNav } from './AllNav'
+import { allNav } from '../../data/AllNav'
 
 export const getNav = (role) => {
   const finalNav = []
