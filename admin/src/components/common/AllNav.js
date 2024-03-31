@@ -1,4 +1,4 @@
-import { AiOutlineDashboard } from 'react-icons/ai'
+import { AiOutlineDashboard, AiOutlineShopping } from 'react-icons/ai'
 
 export const allNav = [
   {
@@ -11,9 +11,9 @@ export const allNav = [
 
   {
     id: 2,
-    title: 'Dashboard',
+    title: 'Orders',
     path: '/admin/dashboard',
-    icon: <AiOutlineDashboard />,
-    role: 'seller',
+    icon: <AiOutlineShopping />,
+    role: 'admin',
   },
 ]
