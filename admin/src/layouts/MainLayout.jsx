@@ -11,7 +11,6 @@ const MainLayout = () => {
       <SideBar showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
 
       <div className='ml-0 lg:ml-[260px] pt-[95px] transition-all'>
-        Admin Main Layout
         <Outlet />
       </div>
     </div>
