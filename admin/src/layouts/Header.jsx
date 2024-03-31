@@ -13,6 +13,33 @@ const Header = ({ showSideBar, setShowSideBar }) => {
             <FaList />
           </span>
         </div>
+
+        <div className='hidden md:block'>
+          <input
+            className='px-3 py-2 border bg-transparent rounded-md text-[#423d72] focus:border-indigo-300 overflow-hidden outline-none'
+            type='text'
+            name='search'
+            placeholder='search'
+          />
+        </div>
+
+        <div className='flex justify-center items-center gap-8 relative'>
+          <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center gap-3'>
+              <div className='flex justify-center items-center flex-col text-end'>
+                <p className='text-[#423d72] font-bold'>AbdurRahman</p>
+                <p className='text-[#5072e2] '>Admin</p>
+              </div>
+              <div className='w-[40px] h-[40px] rounded-full overflow-hidden'>
+                <img
+                  src='http://localhost:3000/images/admin.jpg'
+                  alt=''
+                  className='w-full h-full'
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
