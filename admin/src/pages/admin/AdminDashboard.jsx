@@ -129,7 +129,6 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
-
         <div className='w-full flex flex-wrap mt-7'>
           <div className='w-full lg:w-7/12 lg:pr-3'>
             <div className='w-full bg-[#07102c] p-4 rounded-md'>
@@ -160,6 +159,30 @@ const AdminDashboard = () => {
                       <img
                         src='http://localhost:3000/images/admin.jpg'
                         alt='admin'
+                        className='w-full h-full rounded-full shadow-lg'
+                      />
+                    </div>
+
+                    <div className='p-3 bg-slate-800 rounded-lg border border-slate-600 shadow-sm'>
+                      <div className='flex justify-between items-center mb-2'>
+                        <Link>admin</Link>
+                        <time> 2 day ago</time>
+                      </div>
+
+                      <div>
+                        <div className='p-2 text-xs font-normal bg-slate-700 rounded-lg border border-slate-800'>
+                          m.message
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li className='mb-3 ml-6'>
+                    <div className='flex absolute -left-5 shadow-lg justify-center items-center w-10 h-10 p-[6px] bg-[#4c7fe2] rounded-full z-10'>
+                      <img
+                        src='http://localhost:3000/images/admin.jpg'
+                        alt='admin'
+                        className='w-full h-full rounded-full shadow-lg'
                       />
                     </div>
 
@@ -179,6 +202,66 @@ const AdminDashboard = () => {
                 </ol>
               </div>
             </div>
+          </div>
+        </div>
+        {/* Add this div */}
+        <div className='w-full p-4 bg-[#1b866f] rounded-md mt-6'>
+          <div className='flex justify-between items-center border-b-2 border-cyan-400'>
+            <h2 className='font-semibold text-lg text-[#d0d2d6] pb-3 '>
+              Recent Orders
+            </h2>
+            <Link className='font-semibold text-sm text-[#d0d2d6]'>
+              View All
+            </Link>
+          </div>
+
+          <div className='relative overflow-x-auto'>
+            <table className='w-full text-sm text-left text-[#d0d2d6]'>
+              <thead className='text-sm text-[#d0d2d6] uppercase border-b border-slate-700'>
+                <tr>
+                  <th scope='col' className='py-3 px-4'>
+                    Order Id
+                  </th>
+                  <th scope='col' className='py-3 px-4'>
+                    Price
+                  </th>
+                  <th scope='col' className='py-3 px-4'>
+                    Payment Status
+                  </th>
+                  <th scope='col' className='py-3 px-4'>
+                    Order Status
+                  </th>
+                  <th scope='col' className='py-3 px-4'>
+                    Active
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr className='border-b border-slate-700'>
+                  <td className='py-3 px-4'>#1234</td>
+                  <td className='py-3 px-4'>$125</td>
+                  <td className='py-3 px-4'>Paid</td>
+                  <td className='py-3 px-4'>Delivered</td>
+                  <td className='py-3 px-4'>
+                    <button className='bg-[#f8d8d8] text-[#fa0305] px-3 py-1 rounded-md'>
+                      Active
+                    </button>
+                  </td>
+                </tr>
+                <tr className='border-b border-slate-700'>
+                  <td className='py-3 px-4'>#1234</td>
+                  <td className='py-3 px-4'>$125</td>
+                  <td className='py-3 px-4'>Paid</td>
+                  <td className='py-3 px-4'>Delivered</td>
+                  <td className='py-3 px-4'>
+                    <button className='bg-[#f8d8d8] text-[#fa0305] px-3 py-1 rounded-md'>
+                      Active
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
