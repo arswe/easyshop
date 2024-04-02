@@ -31,11 +31,7 @@ const Header = ({ showSideBar, setShowSideBar }) => {
                 <p className='text-[#5072e2] '>Admin</p>
               </div>
               <div className='w-[40px] h-[40px] rounded-full overflow-hidden'>
-                <img
-                  src='http://localhost:3000/images/admin.jpg'
-                  alt=''
-                  className='w-full h-full'
-                />
+                <img src='http://localhost:3000/images/admin.jpg' alt='' className='w-full h-full' />
               </div>
             </div>
           </div>
