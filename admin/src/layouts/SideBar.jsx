@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BiLogOut } from 'react-icons/bi'
 import { Link, useLocation } from 'react-router-dom'
-import { getNav } from '../components/common/getNav'
+import { getNav } from '../common/getNav'
 
 const SideBar = ({ showSideBar, setShowSideBar }) => {
   const { pathname } = useLocation()
@@ -27,11 +27,7 @@ const SideBar = ({ showSideBar, setShowSideBar }) => {
       >
         <div className='h-[70px] flex justify-center items-center'>
           <Link to='/' className='w-[180px] h-[50px]'>
-            <img
-              className='w-full h-full'
-              src='http://localhost:3000/images/logo.png'
-              alt=''
-            />
+            <img className='w-full h-full' src='http://localhost:3000/images/logo.png' alt='' />
           </Link>
         </div>
 
@@ -48,9 +44,7 @@ const SideBar = ({ showSideBar, setShowSideBar }) => {
                   } 
                   px-[12px] py-[9px] rounded-sm flex justify-start items-center gap-[12px] hover:pl-4 transition-all w-full mb-1 `}
                 >
-                  <div className='w-[40px] h-[40px] flex justify-center items-center'>
-                    {nav.icon}
-                  </div>
+                  <div className='w-[40px] h-[40px] flex justify-center items-center'>{nav.icon}</div>
                   <p>{nav.title}</p>
                 </Link>
               </li>
